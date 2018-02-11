@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Canvas Draw</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <style>
+        #myCanvas {
+            border: 1px solid black;
+        }
+        #drawhere {
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="800" height="400"></canvas>
+    <div id="drawhere">
+        <div id="xsave" class="btn btn-primary">Save</div>
+        <div id="xclear" class="btn btn-danger">Clear</div>
+        <label for="pen-color">Choose a color</label>
+        <input id="pen-color" type="color" />
+        <label for="pen-width">Choose a stroke width</label>
+        <input id="pen-width" type="range" min="1" max="20" />
+    </div>
+    <img id="canvasout" style="display:none;">
+    <script src='script.js'></script>
+</body>
+
+</html>
