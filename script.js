@@ -32,9 +32,10 @@ var drawwidth = penwid.value;
 pencol.addEventListener('change', fcolor);
 penwid.addEventListener('change', fwidth);
 
-//Execute fsave and fclear when respective buttons are clicked
+//Execute functions when respective buttons are clicked
 document.getElementById('xsave').addEventListener("click", fsave);
 document.getElementById('xclear').addEventListener("click", fclear);
+document.getElementById('xdownload').addEventListener("click", fdown);
 
 //Check for movement of mouse over the canvas
 canvas.addEventListener('mousemove', function (e) {
@@ -114,4 +115,11 @@ function fclear() {
         ctx.clearRect(0, 0, w, h);
         outputcanvas.style.display = 'none';
     }
+}
+
+//Download
+function fdown() {
+	var button = document.getElementById('xdownload');
+	var dataURL = canvas.toDataURL('image/png');
+	button.href = dataURL;
 }
